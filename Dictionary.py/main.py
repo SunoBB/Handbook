@@ -36,3 +36,15 @@ for i in range(len(ds)):
 f.close()
 g.close()
 
+# B3
+N = int(input())
+S1, S2, S3, S4 = 0, 0, 0, 0
+
+for i in range(N):
+	A = list(map(int, input().split()))
+	S1 += sum(A[:N-i])
+	S2 += sum(A[i:])
+	S3 += sum(A[:i+1])
+	S4 += sum(A[N-i-1:])
+	
+print(str(S1)+ '\n' +str(S2)+ '\n' + str(S3)+ '\n' +str(S4))
